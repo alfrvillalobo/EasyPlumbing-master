@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { user } from 'src/app/models/usuario/usuario';
@@ -19,7 +18,7 @@ export class RegisterPage {
     numero: '',
     password: '',
     uid: '',
-    perfil: ['cliente', 'colaborador']
+    perfil: 'cliente' // Establece 'cliente' como perfil predeterminado
   }
 
   constructor(
@@ -41,8 +40,7 @@ export class RegisterPage {
       const res = await this.auth.registerUser(this.datos);
   
       if (res && res.user) {
-        console.log('exito al crear usuario');
-        const path = 'Usuarios';
+        const path = this.datos.perfil === 'colaborador' ? 'Colaboradores' : 'Clientes';
         const id = res.user.uid;
         this.datos.uid = id;
         this.datos.password = ''; 
@@ -58,5 +56,4 @@ export class RegisterPage {
       this.helper.loadingController.dismiss();
     }
   }
-  
 }

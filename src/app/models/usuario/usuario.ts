@@ -4,5 +4,5 @@ export interface user {
   numero: string;
   password: string;
   uid: string;
-  perfil: string[];
+  perfil: string;
 }
