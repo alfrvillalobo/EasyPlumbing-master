@@ -1,0 +1,86 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title size="large">REGISTRO</ion-title>
+      <ion-buttons slot="end">
+        <ion-back-button defaultHref="/login"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <!-- Tarjeta para seleccionar tipo de usuario -->
+  <ion-card>
+    <ion-card-content>
+      <ion-radio-group [(ngModel)]="datos.perfil">
+        <ion-list-header>
+          <ion-label>Por favor, selecciona tu tipo de usuario.</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Cliente</ion-label>
+          <ion-radio value="cliente"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Colaborador</ion-label>
+          <ion-radio value="colaborador"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Tarjeta para especialidades que aparece solo para colaboradores -->
+  <ion-card *ngIf="datos.perfil === 'colaborador'">
+    <ion-card-content>
+      <ion-list-header>
+        <ion-label>Selecciona tu especialidad</ion-label>
+      </ion-list-header>
+      <ion-radio-group [(ngModel)]="datos.especialidad">
+        <ion-item>
+          <ion-label>Gasfitería</ion-label>
+          <ion-radio value="gasfiteria"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Plomería</ion-label>
+          <ion-radio value="plomeria"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Cerrajería</ion-label>
+          <ion-radio value="cerrajeria"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Limpieza</ion-label>
+          <ion-radio value="limpieza"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+  
+  <!-- Tarjeta para ingresar información personal -->
+  <ion-card>
+    <ion-card-content>
+      <ion-list-header>
+        <ion-label>Por favor, rellena los campos con tu información.</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="datos.nombre" name="nombre" aria-label="nombre" placeholder="Ingrese su nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Correo electrónico</ion-label>
+        <ion-input [(ngModel)]="datos.correo" name="correo" aria-label="correo" placeholder="Ingrese su correo electrónico" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Número telefónico</ion-label>
+        <ion-input [(ngModel)]="datos.numero" name="numero" aria-label="numero" placeholder="Ingrese su número de celular" type="tel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input [(ngModel)]="datos.password" name="password" aria-label="password" placeholder="Ingrese su contraseña" type="password"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-button expand="full" color="danger" (click)="registrar()">REGISTRARSE</ion-button>
+</ion-content>
+
+
+

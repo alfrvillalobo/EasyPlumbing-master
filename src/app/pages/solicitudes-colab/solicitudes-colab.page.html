@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Solicitudes de colaboración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let solicitud of solicitudes">
+      <ion-label>
+        <h2>{{ solicitud.nombre }}</h2>
+        <p>{{ solicitud.especialidad }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="aceptarSolicitud(solicitud.uid)">Aceptar</ion-button>
+        <ion-button (click)="rechazarSolicitud(solicitud.uid)">Rechazar</ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>
