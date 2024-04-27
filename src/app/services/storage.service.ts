@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+<<<<<<< HEAD
 import { firstValueFrom } from 'rxjs';
+=======
+const storagePaciente = 'pacienteData';
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +22,7 @@ export class StorageService {
   }
 
   getCollection<tipo>(path: string) {
+<<<<<<< HEAD
     return this.firestore.collection<tipo>(path).valueChanges();
   }
 
@@ -41,3 +46,13 @@ export class StorageService {
 }
 
 
+=======
+    const collection = this.firestore.collection<tipo>(path);
+    return collection.valueChanges();
+  }
+
+  getId() {
+    return this.firestore.createId;
+  }
+}
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002

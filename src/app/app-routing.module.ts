@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'request',
     loadChildren: () => import('./pages/request/request.module').then( m => m.RequestPageModule)
   },
+<<<<<<< HEAD
   {
     path: 'tabs',
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
@@ -23,6 +24,8 @@ const routes: Routes = [
     path: 'solicitudes-colab',
     loadChildren: () => import('./pages/solicitudes-colab/solicitudes-colab.module').then( m => m.SolicitudesColabPageModule)
   },
+=======
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
 ];
 
 @NgModule({

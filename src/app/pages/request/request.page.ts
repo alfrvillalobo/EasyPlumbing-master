@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { solicitud } from 'src/app/models/usuario/crearSolicitud';
 import { AuthService } from 'src/app/services/auth.service';
 import { HelperService } from 'src/app/services/helper.service';
+=======
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
 
 @Component({
   selector: 'app-request',
@@ -11,6 +14,7 @@ import { HelperService } from 'src/app/services/helper.service';
 })
 export class RequestPage implements OnInit {
 
+<<<<<<< HEAD
   isModalOpen = false;
   especialidad: string[] = [];
   filtroEspecialidad: string = '';
@@ -83,3 +87,11 @@ export class RequestPage implements OnInit {
   }
   
 }
+=======
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002

@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { LoadingController } from '@ionic/angular';
 import { solicitud } from 'src/app/models/usuario/crearSolicitud';
 import { AuthService } from 'src/app/services/auth.service';
 import { HelperService } from 'src/app/services/helper.service';
 import { StorageService } from 'src/app/services/storage.service';
+=======
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
 
 @Component({
   selector: 'app-provide',
@@ -12,6 +15,7 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class ProvidePage implements OnInit {
 
+<<<<<<< HEAD
   isColaborador?: boolean;
   datosColaborador: solicitud = {
     nombre: '',
@@ -68,6 +72,11 @@ export class ProvidePage implements OnInit {
       } catch (error) {
       }
     }
+=======
+  constructor() { }
+
+  ngOnInit() {
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
   }
 
 }

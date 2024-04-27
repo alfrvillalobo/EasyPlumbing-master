@@ -7,8 +7,11 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+<<<<<<< HEAD
   
   <!-- Tarjeta para seleccionar tipo de usuario -->
+=======
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
   <ion-card>
     <ion-card-content>
       <ion-radio-group [(ngModel)]="datos.perfil">
@@ -24,6 +27,7 @@
           <ion-radio value="colaborador"></ion-radio>
         </ion-item>
       </ion-radio-group>
+<<<<<<< HEAD
     </ion-card-content>
   </ion-card>
   
@@ -49,10 +53,42 @@
         <ion-item>
           <ion-label>Limpieza</ion-label>
           <ion-radio value="limpieza"></ion-radio>
+=======
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-radio-group [(ngModel)]="datos.perfil">
+        <ion-list-header>
+          <ion-label>Por favor, rellena los campos con tu información.</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input [(ngModel)]="datos.nombre" name="nombre" aria-label="nombre" placeholder="Ingrese su nombre" type="text"></ion-input>
+          <ion-icon name="person-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo electrónico</ion-label>
+          <ion-input [(ngModel)]="datos.correo" name="correo" aria-label="correo" placeholder="Ingrese su correo electrónico" type="email"></ion-input>
+          <ion-icon name="mail-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Número telefónico</ion-label>
+          <ion-input [(ngModel)]="datos.numero" name="numero" aria-label="numero" placeholder="Ingrese su número de celular" type="tel"></ion-input>
+          <ion-icon name="call-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input [(ngModel)]="datos.password" name="password" aria-label="password" placeholder="Ingrese su contraseña" type="password"></ion-input>
+          <ion-icon name="eye" slot="end" ></ion-icon>
+          <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
         </ion-item>
       </ion-radio-group>
     </ion-card-content>
   </ion-card>
+<<<<<<< HEAD
   
   <!-- Tarjeta para ingresar información personal -->
   <ion-card>
@@ -84,3 +120,7 @@
 
 
 
+=======
+  <ion-button size="full" color="danger" (click)="registrar()">REGISTRARSE</ion-button>
+</ion-content>
+>>>>>>> 46fd173cd755c599c55732533c0d7ace1423e002
